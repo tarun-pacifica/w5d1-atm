@@ -1,0 +1,28 @@
+.container {
+  border: 10px solid black;
+  margin: 50px;
+  text-align: center;
+  width: 1000px;
+  background-color: yellow;
+  padding: 25 px;
+  font-family: 'Voces', cursive;
+}
+
+.checking, .savings, .buttons, img {
+  display: inline-block;
+  width: 60%;
+  text-align: center;
+  padding: 1px;
+  margin: 10 px;
+  border: 0px solid yellow;
+}
+
+h2, h3 {
+color: black;
+margin: 10px;
+}
+
+.cba {
+  width: 150px;
+  display: inline-block;
+}
