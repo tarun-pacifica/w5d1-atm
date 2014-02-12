@@ -42,13 +42,16 @@ $(document).ready(function () {
     var deduction = $('#checking').val();
         deduction = parseInt(deduction);
     var excess = cheque - deduction;//do i need to specify 'var' again?
-      if(excess < 0) {
+      if(excess <= 0) {
         alert('deduction exceeds excess. Balance will be taken from other account.');
         console.log(excess);
-        $('#checking_balance').val(0);
-        // cheque = savings + excess;dont need this anymore?
-        $('#checking_balance').text(cheque);
+        $('#checking_balance').text('0');
+        $('#checking').html('0');//this aint working, how do i clear the inputted value//
+
+        excess = Math.abs(excess);
+        console.log('abs excess'+excess);
         savings_withdraw(excess);
+        console.log(excess);
     } else {
         cheque = cheque - deduction;
         console.log('checking account balance equals '+cheque);
@@ -71,11 +74,11 @@ $(document).ready(function () {
     deduction = deduction || $('#saving').val();
     deduction = parseInt(deduction);
     console.log(deduction);
-    if(savings < 1) {
+    if(savings <= 0) {
         alert('Balance is ZERO. Try again');
         $('#savings_balance').text(savings);
     } else {
-        savings = savings  deduction;
+        savings = savings - deduction;
         $('#savings_balance').text(savings);
     }
   };
