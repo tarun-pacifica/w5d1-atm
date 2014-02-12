@@ -46,7 +46,7 @@ $(document).ready(function () {
         alert('deduction exceeds excess. Balance will be taken from other account.');
         console.log(excess);
         $('#checking_balance').text('0');
-        $('#checking').html('0');//this aint working, how do i clear the inputted value//
+        $('#checking').val('0');
 
         excess = Math.abs(excess);
         console.log('abs excess'+excess);

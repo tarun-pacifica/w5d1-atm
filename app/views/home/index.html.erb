@@ -1,11 +1,13 @@
 <div class ="container">
-<div class = "cba"><img src="/assets/logo.jpg"></div>
+  <div class = "cba">
+    <img src="/assets/logo.jpg">
+  </div>
   <h1 class="navbar">Commonwealth Bank</h1>
   <div class="cheque">
     <h3>Cheque Account</h3>
     <h3 id="checking_balance"></h3>
     <div>
-      <textarea class="FormElement" name="term" id="checking" cols="40" rows="1"></textarea>
+      <input id="checking" type="number"/>
     </div>
     <div class="buttons">
       <button class="deposit">DEPOSIT</button>
@@ -15,7 +17,9 @@
   <div class="savings">
     <h3>Savings Account</h3>
     <h3 id="savings_balance"></h3>
-    <textarea class="FormElement" name="term" id="saving" cols="40" rows="1"></textarea>
+    <div>
+      <input type="number"id="saving"/>
+    </div>
     <div class="buttons">
       <button class="deposit">DEPOSIT</button>
       <button class="withdraw">WITHDRAW</button>
